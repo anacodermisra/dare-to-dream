@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Dare to Dream</title>
+  <link rel="stylesheet" href="assets/style/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="login-page">
+    <h1>Select Login Type</h1>
+    <div class="login-options">
+      <div class="login-card" onclick="openModal('adminModal')">
+        <i class="fas fa-user-shield"></i>
+        <h3>Login as Admin</h3>
+      </div>
+
+      <div class="login-card" onclick="openModal('participantModal')">
+        <i class="fas fa-user"></i>
+        <h3>Login as Participant</h3>
+        <p class="signup-link">New here? <a href="#" onclick="openModal('signupModal')">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div class="modal" id="adminModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('adminModal')">&times;</span>
+      <h2>Admin Login</h2>
+      <form onsubmit="handleLogin(event,'admin'); return false;">
+  <input type="email" id="adminEmail" placeholder="Email" required />
+  <input type="password" id="adminPassword" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+
+    </div>
+  </div>
+
+  <!-- Participant Login Modal -->
+  <div class="modal" id="participantModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('participantModal')">&times;</span>
+      <h2>Participant Login</h2>
+     <form onsubmit="handleLogin(event,'participant'); return false;">
+  <input type="email" id="participantEmail" placeholder="Email" required />
+  <input type="password" id="participantPassword" placeholder="Password" required />
+  <button type="submit">Login</button>
+  <p class="signup-link">New here? <a href="#" onclick="openModal('signupModal')">Sign Up</a></p>
+</form>
+
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signupModal')">&times;</span>
+      <h2>Sign Up as Participant</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required />
+      <input type="email" id="signupEmail" placeholder="Email ID" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <input type="password" id="signupConfirm" placeholder="Confirm Password" required />
+      <button onclick="handleSignup()">Sign Up</button>
+    </div>
+  </div>
+
+  <script src="assets/javascript/login.js"></script>
+</body>
+</html>

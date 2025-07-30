@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Participant Dashboard | Dare to Dream</title>
+  <link rel="stylesheet" href="assets/style/partcipant.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Dare to Dream</div>
+    <div class="dashboard-title">Participant Dashboard</div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <div class="left-panel">
+      <h2>Actions</h2>
+      <button onclick="location.href='register.html'" class="action-btn">
+        <i class="fas fa-plus-circle"></i> Submit Your Idea
+      </button>
+    </div>
+
+    <div class="right-panel">
+      <h2>Your Submission Details</h2>
+      <div class="submission-details" id="submissionDetails">
+        <!-- Filled dynamically by JS -->
+      </div>
+    </div>
+  </main>
+
+ <script src="assets/javascript/participant.js"></script>
+
+</body>
+</html>

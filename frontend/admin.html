@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Dare to Dream</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/style/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- 🔷 NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Dare to Dream – Admin Dashboard</div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- 📊 STATS SECTION -->
+    <section class="stats-section">
+      <h2>Dashboard Statistics</h2>
+   
+
+      <!-- 📈 CHARTS -->
+       <div class="charts">
+      <div class="chart-container">
+        <canvas id="verticalChart" class="chartjs"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="categoryChart" class="chartjs"></canvas>
+      </div>
+      </div>
+    </section>
+
+    <!-- 🛠 ADMIN ACTIONS -->
+    <section class="actions-section">
+      <button class="btn primary" onclick="fetchSubmissions()">
+        <i class="fas fa-folder-open"></i> View All Submissions
+      </button>
+      <button class="btn" onclick="location.href='edit-details.html'">
+        <i class="fas fa-edit"></i> Edit Deadlines / Categories
+      </button>
+      <button class="btn" onclick="downloadAll()">
+        <i class="fas fa-download"></i> Download All PDFs + Metadata
+      </button>
+    </section>
+
+    <!-- 📄 SUBMISSIONS TABLE -->
+    <section class="table-section">
+      <h2>Submissions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Vertical</th>
+            <th>Title</th>
+            <th>Abstract</th>
+            <th>PDF</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="submissionsBody">
+          <!-- JS will fill this -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script src="assets/javascript/admin.js"></script>
+</body>
+</html>

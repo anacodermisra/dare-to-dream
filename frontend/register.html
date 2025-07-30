@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Dare to Dream</title>
+  <link rel="stylesheet" href="assets/style/register.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Dare to Dream 2025 – Registration</h2>
+    <p id="stepIndicator">Step 1 of 4</p>
+    <div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+    <form id="multiStepForm">
+      <!-- step1 -->
+      <div class="form-step active">
+        <label>Full Name / Team Name</label>
+        <input type="text" name="name" required />
+        <label>Email</label>
+        <input type="email" name="email" required />
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required />
+
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <!-- step2 -->
+      <div class="form-step">
+        <label>Select Category</label>
+        <select name="category" required>
+          <option>Individual</option>
+          <option>Startup</option>
+          <option>MSME</option>
+        </select>
+
+        <label for="innovation_vertical">Innovation Vertical</label>
+<select name="innovation_vertical" id="innovation_vertical" required>
+  <option value="">-- Select Vertical --</option>
+        </select>
+
+<label for="projectTitle">Project Title:</label>
+<input type="text" name="projectTitle" id="projectTitle" required />
+
+<label for="abstract">Abstract:</label>
+<textarea name="abstract" id="abstract" rows="4" required></textarea>
+
+
+        <div class="form-nav">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- step3 -->
+      <div class="form-step">
+        <label>Upload Proposal (PDF, Max 10MB)</label>
+        <input type="file" accept=".pdf" name="pdf" required />
+
+        <div class="form-nav">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- step4 -->
+    
+<div class="form-step">
+  <h3>Review Your Submission</h3>
+  <div id="reviewSummary">
+ 
+  </div>
+        <div class="form-nav">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/javascript/register.js"></script>
+</body>
+</html>

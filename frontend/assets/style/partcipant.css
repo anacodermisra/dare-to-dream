@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.navbar {
+  background-color: #002244;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dashboard-title {
+  font-size: 1.2rem;
+}
+
+.logout-btn {
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.left-panel, .right-panel {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.left-panel {
+  max-width: 30%;
+}
+
+.right-panel {
+  flex: 2;
+}
+
+.action-btn {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.action-btn i {
+  margin-right: 0.5rem;
+}
+
+.submission-details p {
+  margin-bottom: 0.5rem;
+}

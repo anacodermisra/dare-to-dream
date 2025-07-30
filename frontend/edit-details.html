@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Innovation Verticals | Dare to Dream</title>
+  <link rel="stylesheet" href="assets/style/edit-details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Dare to Dream – Admin Config</div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <main class="main-container">
+    <h1>Edit Innovation Verticals</h1>
+
+    <!-- DYNAMIC VERTICAL LIST -->
+    <div id="verticalsList" class="list-container">
+      <!-- JS will populate here -->
+    </div>
+
+    <!-- ADD NEW -->
+    <div class="add-new">
+      <input type="text" id="newVerticalInput" placeholder="Add new vertical">
+      <button onclick="addVertical()"><i class="fas fa-plus-circle"></i></button>
+    </div>
+
+    <!-- SUBMIT -->
+    <button class="save-btn" onclick="saveVerticals()">💾 Save Changes</button>
+  </main>
+
+  <script src="assets/javascript/edit-details.js"></script>
+</body>
+</html>
