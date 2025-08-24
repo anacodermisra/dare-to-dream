@@ -12,3 +12,5 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+//MONGO_URI=mongodb+srv://anand:Anand@cluster1.n1xtppf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1
