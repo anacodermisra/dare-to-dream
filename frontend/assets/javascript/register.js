@@ -98,7 +98,7 @@ form.addEventListener("submit", async function (e) {
   console.log("🔐 Sending token:", token);
 
   try {
-    const response = await fetch("http://localhost:5000/api/submission/submit", {
+    const response = await fetch("https://dare-to-dream-ideathon.onrender.com/api/submission/submit", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}` // FormData handles content-type
@@ -134,7 +134,7 @@ location.assign("participant.html");
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:5000/api/public/verticals")
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/public/verticals")
     .then(res => res.json())
     .then(verticals => {
       const select = document.querySelector('select[name="innovation_vertical"]');

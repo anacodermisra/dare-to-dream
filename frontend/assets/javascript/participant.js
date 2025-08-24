@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ✅ Fetch user submissions
-  fetch('http://localhost:5000/api/submission/my', {
+  fetch('https://dare-to-dream-ideathon.onrender.com/api/submission/my', {
     headers: {
       'Authorization': `Bearer ${token}`
     }

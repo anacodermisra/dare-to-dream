@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!token) return location.href = "login.html";
 
   // 🧠 Load from DB
-  fetch("http://localhost:5000/api/admin/config", {
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/admin/config", {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -70,7 +70,7 @@ function removeVertical(index) {
 function saveVerticals() {
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:5000/api/admin/config", {
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/admin/config", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

@@ -53,7 +53,7 @@ function logout() {
 function fetchSubmissions() {
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:5000/api/admin/submissions", {
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/admin/submissions", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -94,7 +94,7 @@ function deleteSubmission(id) {
   const token = localStorage.getItem("token");
   if (!confirm("Are you sure you want to delete this submission?")) return;
 
-  fetch(`http://localhost:5000/api/admin/delete/${id}`, {
+  fetch(`https://dare-to-dream-ideathon.onrender.com/api/admin/delete/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -114,7 +114,7 @@ function deleteSubmission(id) {
 // ✅ STEP 6: Download all submissions as ZIP
 function downloadAll() {
   const token = localStorage.getItem("token");
-  fetch("http://localhost:5000/api/admin/download/all", {
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/admin/download/all", {
     headers: { Authorization: `Bearer ${token}` }
   })
   .then(res => {
@@ -140,7 +140,7 @@ function downloadAll() {
 function loadStats() {
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:5000/api/admin/stats", {
+  fetch("https://dare-to-dream-ideathon.onrender.com/api/admin/stats", {
     headers: {
       Authorization: `Bearer ${token}`
     }
