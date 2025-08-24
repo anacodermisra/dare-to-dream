@@ -474,4 +474,90 @@ details p {
    color: #d38123;
 }
 
+/* ---- Perks Section ---- */
+.perks-section {
+  background-color: #f9fafb;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.perk-card {
+  background: white;
+  padding: 2rem;
+  padding-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.perk-card i {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.perk-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+.perk-card p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.perk-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.perk-card:hover h3,
+.perk-card:hover i {
+  color: #d38123;
+}
+
+/* ---- FAQ Section ---- */
+.faq-section {
+  background: #fff;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.faq-section details {
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-section details[open] {
+  background: #fff8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.faq-section summary {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1e3a8a;
+  outline: none;
+}
+
+.faq-section p {
+  margin-top: 0.8rem;
+  color: #374151;
+  font-size: 0.95rem;
+}
 
